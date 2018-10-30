@@ -1,0 +1,20 @@
+1. Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
+
+sort - will return the file sorted alphabetically by line
+sort commands.js returns an alphabetically orderd, nested version of the commands.js file. 
+
+wc - will print newline, word, and byte counts for the file you are requesting.
+commands.js has 34 newlines, 71 words, and is 844 bytes
+
+uniq - will sort each line but will only return different lines. If there are lines within a file that are the same as the line above it, it will remove it from the final output
+With the case of commands.js, there are no repeat lines, so the output looks exactly like what commands.js contains.
+
+2. Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the specific data was outputted.
+
+a. sort commands.js | uniq
+Sorted commands.js in alphabetical order and then used that output to see if there were any identical lines to remove it from that sorted output.
+
+b. uniq commands.js | wc
+Sorted commands to double check if there are lines that have been repeated, returned the sorted file, then counted that new output.
+
+6. In this checkpoint, you encountered built-in JavaScript methods as well as the new ES6 syntax. Review the information below before attempting the programming challenge.
