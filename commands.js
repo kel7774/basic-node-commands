@@ -16,7 +16,7 @@ function evaluateCmd(userInput) {
             commandLibrary.cat(userInputArray.slice(1));
             break;
         default: 
-            console.log(errorHandler()); 
+            commandLibrary.errorHandler(command); 
             break; 
         }
 }
@@ -33,7 +33,7 @@ const commandLibrary = {
         });
     },
     "errorHandler": function(userInput) {
-        let errorMesage = `${userInput} is not a valid command.`
+        let errorMessage = `${userInput} is not a valid command.`;
         done(errorMessage);
     }
 };
