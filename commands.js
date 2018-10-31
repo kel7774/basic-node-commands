@@ -10,17 +10,15 @@ function evaluateCmd(userInput) {
     const command = userInputArray[0];
     switch(command) {
         case "echo":
-        commandLibrary.echo(userInputArray.slice(1).join(" "));
-        break;
+            commandLibrary.echo(userInputArray.slice(1).join(" "));
+            break;
         case "cat":
-        commandLibrary.cat(userInputArray.slice(1));
-        break;
+            commandLibrary.cat(userInputArray.slice(1));
+            break;
         default: 
-        function errorHandler(command) {
-            if(command === 401) 
-            console.log(command + ' is not a valid command.');
+            console.log(errorHandler()); 
+            break; 
         }
-    }
 }
 
 const commandLibrary = {
@@ -33,6 +31,10 @@ const commandLibrary = {
             if(err) throw err;
             done(data);
         });
+    },
+    "errorHandler": function(userInput) {
+        let errorMesage = `${userInput} is not a valid command.`
+        done(errorMessage);
     }
 };
 
