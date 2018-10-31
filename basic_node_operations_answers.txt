@@ -18,3 +18,16 @@ b. uniq commands.js | wc
 Sorted commands to double check if there are lines that have been repeated, returned the sorted file, then counted that new output.
 
 6. In this checkpoint, you encountered built-in JavaScript methods as well as the new ES6 syntax. Review the information below before attempting the programming challenge.
+
+Given a string, reverse the order of characters in each word within a sentence while maintaining the original word order and whitespace and return the string. To improve your problem-solving experience, use the suggested functions to solve the problem.
+
+function reverseString(inputString){
+  let split = inputString.split(" ");
+  let splitOutput = [];
+  split.forEach( (element) => {
+    splitOutput.push(element.split("").reverse().join(""));
+  });
+  return splitOutput.join(" ");
+}
+
+console.log(reverseString('kelli is good at coding'));
